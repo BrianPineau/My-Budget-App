@@ -3,9 +3,35 @@
 //  BUDGET CONTROLLER
 var budgetController = (function () {
     
-    //Some code
+    let Expense = function (id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
 
+    let Income = function (id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    let allExpenses = [];
+    let allIncomes = [];
+    let totalExpenses = 0;
+
+    let data = {
+        allItems : {
+            exp : [],
+            inc : []
+        },
+        totals : {
+            exp : 0,
+            inc : 0
+        }
+    }
+    
 })();
+
 
 
 //  UI CONTROLLER
@@ -58,7 +84,7 @@ let controller = (function (budgetCtrl, UICtrl) {
     let ctrlAddItem = function () {
         //  1.  Get the filed input data
         let input = UICtrl.getInput();
-        
+
 
         //  2.  Add the item to the budget controller
 
